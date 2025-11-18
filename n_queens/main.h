@@ -1,12 +1,35 @@
-//
-//  main.h
-//  informatique-MP2I-MPI
-//
-//  Created by Teghjyot Singh on 18/11/2025.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                           .                      .                   ·     */
+/*        .    __ _o|                        .                ·               */
+/*            |  /__|===--        .                                  ·        */
+/*     *      [__|______~~--._                      .                         */
+/*      .    |\  `---.__:====]-----...,,_____                *          ·     */
+/*           |[>-----|_______<----------_____;::===--             .==.        */
+/*           |/_____.....-----'''~~~~~~~                         ()''()-.     */
+/*      +               ·                           .---.         ;--; /      */
+/*                                                .'_:___". _..'.  __'.       */
+/*   main.h                                        |__ --==|'-''' '...;       */
+/*                                                [  ]  :[|       |---\       */
+/*   By: teghjyot <teghjyot@teghjyot.com>         |__| I=[|     .'    '.      */
+/*                                                / / ____|     :       '._   */
+/*   Created: 2025/11/18 22:15:10 by teghjyot    |-/.____.'      | :      :   */
+/*   Updated: 2025/11/18 22:15:15 by teghjyot     /___ /___      '-'._----'   */
+/*                                                                            */
+/* ************************************************************************** */
 
-#ifndef main_h
-#define main_h
+#ifndef MAIN_H
+# define MAIN_H
 
+# include <stdlib.h>
+# include <stdio.h>
+# include <stdbool.h>
+# include <string.h>
 
-#endif /* main_h */
+# ifndef N_QUEEN
+#  define N_QUEEN 8
+# endif
+
+typedef int	*t_solution;
+
+#endif // !MAIN_H
