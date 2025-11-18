@@ -23,9 +23,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		B3ABA4012ECD16620028FD51 /* informatique-MP2I-MPI */ = {
+		B3ABA4012ECD16620028FD51 /* n_queens */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "informatique-MP2I-MPI";
+			path = n_queens;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -44,7 +44,7 @@
 		B3ABA3F62ECD16620028FD51 = {
 			isa = PBXGroup;
 			children = (
-				B3ABA4012ECD16620028FD51 /* informatique-MP2I-MPI */,
+				B3ABA4012ECD16620028FD51 /* n_queens */,
 				B3ABA4002ECD16620028FD51 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +73,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				B3ABA4012ECD16620028FD51 /* informatique-MP2I-MPI */,
+				B3ABA4012ECD16620028FD51 /* n_queens */,
 			);
 			name = "informatique-MP2I-MPI";
 			packageProductDependencies = (
@@ -245,6 +245,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				OTHER_CFLAGS = (
+					"-Wextra",
+					"-Werror",
+					"-Wall",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -253,6 +258,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				OTHER_CFLAGS = (
+					"-Wextra",
+					"-Werror",
+					"-Wall",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
