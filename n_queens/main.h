@@ -25,6 +25,7 @@
 # include <stdio.h>
 # include <stdbool.h>
 # include <string.h>
+# include <time.h>
 
 # ifndef N_QUEEN
 #  define N_QUEEN 8
