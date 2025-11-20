@@ -49,8 +49,8 @@ void	resolution_deterministe(int n)
 	memset(sol, -1, n * sizeof(int));
 	if (peut_etre_completee(sol, 0, n))
 	{
-		printf("Une solution trouvee pour n = %d :\n", n);
-		print_board(sol, n);
+//		printf("Une solution trouvee pour n = %d :\n", n);
+//		print_board(sol, n);
 	}
 	else
 		printf("Aucune solution trouvee pour n = %d.\n", n);

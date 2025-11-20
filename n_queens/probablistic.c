@@ -69,7 +69,7 @@ void	resolution_probabiliste(int n)
 	while (!generation_aleatoire(n, sol))
 	{
 	}
-	printf("Solution probabiliste trouvee pour n = %d :\n", n);
-	print_board(sol, n);
+//	printf("Solution probabiliste trouvee pour n = %d :\n", n);
+//	print_board(sol, n);
 	free(sol);
 }

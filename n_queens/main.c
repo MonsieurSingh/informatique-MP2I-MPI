@@ -60,22 +60,25 @@ bool	est_extension_valide(t_solution sol, int nbl, int col)
 
 int	main(int argc, const char *argv[])
 {
-	int			n;
-	int			i;
+	int		n;
+	int		i;
+	clock_t	begin;
+	clock_t	end;
 
 	(void)argv;
 	(void)argc;
-	n = 50;
+	n = 150;
 	i = 4;
 	while (i < n)
 	{
+		begin = clock();
+//		resolution_deterministe(i);
+		end = clock();
+		printf("Processing time: %lf s pour n = %d\n", (double)((end - begin) / CLOCKS_PER_SEC), i);
+		begin = clock();
 		resolution_probabiliste(i);
-		i++;
-	}
-	i = 0;
-	while (i < n)
-	{
-		resolution_deterministe(i);
+		end = clock();
+		printf("Processing time: %lf s pour n = %d\n", (double)((end - begin) / CLOCKS_PER_SEC), i);
 		i++;
 	}
 	return (EXIT_SUCCESS);
