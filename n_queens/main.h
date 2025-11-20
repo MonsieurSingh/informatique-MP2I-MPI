@@ -33,4 +33,9 @@
 
 typedef int	*t_solution;
 
+void	print_board(t_solution sol, int n);
+bool	est_extension_valide(t_solution sol, int nbl, int col);
+void	resolution_deterministe(int n);
+void	resolution_probabiliste(int n);
+
 #endif // !MAIN_H

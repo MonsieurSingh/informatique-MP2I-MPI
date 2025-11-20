@@ -9,74 +9,50 @@
 /*           |/_____.....-----'''~~~~~~~                         ()''()-.     */
 /*      +               ·                           .---.         ;--; /      */
 /*                                                .'_:___". _..'.  __'.       */
-/*   main.c                                        |__ --==|'-''' '...;       */
+/*   deterministic.c                               |__ --==|'-''' '...;       */
 /*                                                [  ]  :[|       |---\       */
 /*   By: teghjyot <teghjyot@teghjyot.com>         |__| I=[|     .'    '.      */
 /*                                                / / ____|     :       '._   */
-/*   Created: 2025/11/18 22:15:51 by teghjyot    |-/.____.'      | :      :   */
-/*   Updated: 2025/11/18 22:15:53 by teghjyot     /___ /___      '-'._----'   */
+/*   Created: 2025/11/20 11:46:40 by teghjyot    |-/.____.'      | :      :   */
+/*   Updated: 2025/11/20 11:46:41 by teghjyot     /___ /___      '-'._----'   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
-void	print_board(t_solution sol, int n)
+static bool	peut_etre_completee(t_solution sol, int nbl, int n)
 {
 	int	i;
-	int	j;
 
+	if (nbl == n)
+		return (true);
 	i = 0;
 	while (i < n)
 	{
-		printf("|\t%d\t", i);
-		j = 0;
-		while (j < n)
+		if (est_extension_valide(sol, nbl, i))
 		{
-			if (sol[i] != -1 && sol[i] == j)
-				printf(" #");
-			else
-				printf(" X");
-			j++;
+			sol[nbl] = i;
+			if (peut_etre_completee(sol, nbl + 1, n))
+				return (true);
 		}
-		printf("\n");
 		i++;
 	}
-	printf("\n");
+	sol[nbl] = -1;
+	return (false);
 }
 
-bool	est_extension_valide(t_solution sol, int nbl, int col)
+void	resolution_deterministe(int n)
 {
-	int	i;
+	t_solution	sol;
 
-	i = 0;
-	while (i < nbl)
+	sol = (t_solution)malloc(n * sizeof(int));
+	memset(sol, -1, n * sizeof(int));
+	if (peut_etre_completee(sol, 0, n))
 	{
-		if (sol[i] == col || abs(nbl - i) == abs(col - sol[i]))
-			return (false);
-		i++;
+		printf("Une solution trouvee pour n = %d :\n", n);
+		print_board(sol, n);
 	}
-	return (true);
-}
-
-int	main(int argc, const char *argv[])
-{
-	int			n;
-	int			i;
-
-	(void)argv;
-	(void)argc;
-	n = 50;
-	i = 4;
-	while (i < n)
-	{
-		resolution_probabiliste(i);
-		i++;
-	}
-	i = 0;
-	while (i < n)
-	{
-		resolution_deterministe(i);
-		i++;
-	}
-	return (EXIT_SUCCESS);
+	else
+		printf("Aucune solution trouvee pour n = %d.\n", n);
+	free(sol);
 }
