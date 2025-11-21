@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B31639942ECF41A200E843E1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		B3ABA3FD2ECD16620028FD51 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -19,10 +28,29 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B31639962ECF41A200E843E1 /* C5.4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C5.4; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3ABA3FF2ECD16620028FD51 /* informatique-MP2I-MPI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "informatique-MP2I-MPI"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B31639A32ECF42B000E843E1 /* Exceptions for "algorithms" folder in "C5.4" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				randomised/probability/probability.c,
+			);
+			target = B31639952ECF41A200E843E1 /* C5.4 */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		B31639892ECF3C5200E843E1 /* algorithms */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B31639A32ECF42B000E843E1 /* Exceptions for "algorithms" folder in "C5.4" target */,
+			);
+			path = algorithms;
+			sourceTree = "<group>";
+		};
 		B3ABA4012ECD16620028FD51 /* n_queens */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = n_queens;
@@ -31,6 +59,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B31639932ECF41A200E843E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3ABA3FC2ECD16620028FD51 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,6 +79,7 @@
 		B3ABA3F62ECD16620028FD51 = {
 			isa = PBXGroup;
 			children = (
+				B31639892ECF3C5200E843E1 /* algorithms */,
 				B3ABA4012ECD16620028FD51 /* n_queens */,
 				B3ABA4002ECD16620028FD51 /* Products */,
 			);
@@ -53,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				B3ABA3FF2ECD16620028FD51 /* informatique-MP2I-MPI */,
+				B31639962ECF41A200E843E1 /* C5.4 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +97,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B31639952ECF41A200E843E1 /* C5.4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B316399A2ECF41A200E843E1 /* Build configuration list for PBXNativeTarget "C5.4" */;
+			buildPhases = (
+				B31639922ECF41A200E843E1 /* Sources */,
+				B31639932ECF41A200E843E1 /* Frameworks */,
+				B31639942ECF41A200E843E1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = C5.4;
+			packageProductDependencies = (
+			);
+			productName = C5.4;
+			productReference = B31639962ECF41A200E843E1 /* C5.4 */;
+			productType = "com.apple.product-type.tool";
+		};
 		B3ABA3FE2ECD16620028FD51 /* informatique-MP2I-MPI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3ABA4062ECD16620028FD51 /* Build configuration list for PBXNativeTarget "informatique-MP2I-MPI" */;
@@ -73,6 +129,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				B31639892ECF3C5200E843E1 /* algorithms */,
 				B3ABA4012ECD16620028FD51 /* n_queens */,
 			);
 			name = "informatique-MP2I-MPI";
@@ -91,6 +148,9 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
+					B31639952ECF41A200E843E1 = {
+						CreatedOnToolsVersion = 26.1;
+					};
 					B3ABA3FE2ECD16620028FD51 = {
 						CreatedOnToolsVersion = 26.1;
 					};
@@ -111,11 +171,19 @@
 			projectRoot = "";
 			targets = (
 				B3ABA3FE2ECD16620028FD51 /* informatique-MP2I-MPI */,
+				B31639952ECF41A200E843E1 /* C5.4 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B31639922ECF41A200E843E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3ABA3FB2ECD16620028FD51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -126,6 +194,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		B316399B2ECF41A200E843E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B316399C2ECF41A200E843E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		B3ABA4042ECD16620028FD51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -270,6 +354,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B316399A2ECF41A200E843E1 /* Build configuration list for PBXNativeTarget "C5.4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B316399B2ECF41A200E843E1 /* Debug */,
+				B316399C2ECF41A200E843E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B3ABA3FA2ECD16620028FD51 /* Build configuration list for PBXProject "informatique-MP2I-MPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
