@@ -48,9 +48,6 @@ int	binomiale(int n, float p)
 
 int main(int argc, const char * argv[])
 {
-	size_t	i;
-	size_t	count;
-
 	(void)argc;
 	(void)argv;
 	init_rand();

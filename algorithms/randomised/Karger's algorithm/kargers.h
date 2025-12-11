@@ -9,5 +9,10 @@
 #define kargers_h
 
 #include <stdio.h>
+#include "multigraph.h"
+#include "union_find.h"
+#include <time.h>
+
+int karger_min_cut(t_multigraph_adj_list *graph);
 
 #endif /* kargers_h */
